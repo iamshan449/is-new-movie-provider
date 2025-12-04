@@ -53,15 +53,15 @@ FILES_DATABASE = environ.get("FILES_DATABASE", "")
 COLLECTION_NAME = environ.get("COLLECTION_NAME", "jisshu")
 
 # Other Channel's
-SUPPORT_GROUP = int(environ.get("SUPPORT_GROUP", "-1001864434358"))
+SUPPORT_GROUP = int(environ.get("SUPPORT_GROUP", ""))
 DELETE_CHANNELS = int(environ.get("DELETE_CHANNELS", "0"))
-request_channel = environ.get("REQUEST_CHANNEL", "-1001864434358")
+request_channel = environ.get("REQUEST_CHANNEL", "")
 REQUEST_CHANNEL = (
     int(request_channel)
     if request_channel and id_pattern.search(request_channel)
     else None
 )
-MOVIE_UPDATE_CHANNEL = int(environ.get("MOVIE_UPDATE_CHANNEL", "-1001864434358"))
+MOVIE_UPDATE_CHANNEL = int(environ.get("MOVIE_UPDATE_CHANNEL", ""))
 
 # Added Link Here Not Id
 SUPPORT_CHAT = environ.get("SUPPORT_CHAT", "")
@@ -139,13 +139,13 @@ PAYPICS = (
     environ.get("PAYPICS", "https://graph.org/file/f4db1c3ad3d9e38b328e6.jpg")
 ).split()
 SUBSCRIPTION = environ.get(
-    "SUBSCRIPTION", "https://graph.org/file/9f3f47c690bbcc67633c2.jpg"
+    "SUBSCRIPTION", ""
 )
 REACTIONS = ["👀", "😱", "🔥", "😍", "🎉", "🥰", "😇", "⚡"]
 
 
 # Other Funtions
-FILE_AUTO_DEL_TIMER = int(environ.get("FILE_AUTO_DEL_TIMER", "600"))
+FILE_AUTO_DEL_TIMER = int(environ.get("FILE_AUTO_DEL_TIMER", "300"))
 AUTO_FILTER = is_enabled("AUTO_FILTER", True)
 IS_PM_SEARCH = is_enabled("IS_PM_SEARCH", False)
 IS_SEND_MOVIE_UPDATE = is_enabled(
